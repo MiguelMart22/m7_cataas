@@ -13,7 +13,8 @@ class CatImageController extends Controller
      */
     public function index()
     {
-        //
+        $cats = CatImage::all();
+        return $cats;
     }
 
     /**
