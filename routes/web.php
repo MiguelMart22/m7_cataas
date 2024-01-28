@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CatImageController;
+use App\Models\CatImage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/cats',[CatImageController::class], 'index');
+
+Route::get('/cats',[CatImageController::class, 'index']);
+Route::post('/cats',[CatImageController::class, 'store']);
+Route::post('/cats/{catImage}',[CatImageController::class, 'show']);
