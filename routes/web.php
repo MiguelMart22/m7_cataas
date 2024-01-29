@@ -19,6 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cats',[CatImageController::class, 'index']);
-Route::post('/cats',[CatImageController::class, 'store']);
-Route::post('/cats/{catImage}',[CatImageController::class, 'show']);
+//Route::get('/gatitos',[CatImageController::class,'gatitos']);
